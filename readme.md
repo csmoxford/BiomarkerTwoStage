@@ -5,8 +5,16 @@ Contained within this repository are programs for running single arm two-stage t
 
 ## Dependencies
 
-Some of the simulation rely on the package trialSim (v1.0) which is available on github only. This package is a modular system for simulating trials. All other dependencies are available on CRAN.
+Some of the simulation rely on the package trialSim (v1.0) which is available on github only. This package is a modular system for simulating trials. All other dependencies are available on CRAN. Further instructions can be found in the file: 0_instructions_and_runPaper.R
 
+
+## Acknowledgements
+
+We would like to thank Yong Zang and Ying Yuan who kindly provided code to generate designs for their sequential enrichment design.
+
+## Author
+
+Programmed by: Peter Dutton (Centre for Statistic in Medicine, University of Oxford)
 
 ## References
 
