@@ -51,10 +51,9 @@ df = rbind(df,getIndParallelProperties("IndParallel",pr.positive, p0,p1, res, n1
 
 ##############################################################################
 # Sequential enrichment
-source(paste0(programDir,"run_table1_Zang_Yuan.R"))
+source(paste0(programDir,"run_table1_Sequential_Bayesian.R"))
 
 df = rbind(df,dta)
-df = rbind(df,dta1)
 
 df
 

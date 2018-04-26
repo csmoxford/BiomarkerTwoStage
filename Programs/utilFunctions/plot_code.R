@@ -59,12 +59,16 @@ plotTime = function(df1, ylab = TRUE, xlab = TRUE, ylim){
 
 }
 
-plotTruePositive = function(df1, which, ylab = TRUE, xlab = FALSE, ylim = c(0.7,1)){
+plotTruePositive = function(df1, which, ylab = TRUE, xlab = FALSE, ylim = c(0.7,1), lineIfEqual = FALSE){
 
   par(mar=c(3,3,0.1,0.1))
   plot(df1[,"P(+)"],df1[, which],col=0, axes = FALSE, xlab = "", ylab = "", ylim = ylim)
   for(design in the_design_names){
+    if(lineIfEqual && length(table(df1[df1$Design == design, which])) == 1) {
+      abline(h=df1[df1$Design == design, which], col = df1$col[df1$Design == design], lwd = 2)
+    } else {
     points(df1[df1$Design == design,"P(+)"],df1[df1$Design == design, which],type = "b", col = df1$col[df1$Design == design], pch = 16, cex = 2, lty = 2)
+    }
   }
 
   axis(1, padj = - 0.3)
@@ -73,7 +77,7 @@ plotTruePositive = function(df1, which, ylab = TRUE, xlab = FALSE, ylim = c(0.7,
     mtext(expression(P(b^{"+"})), 1, line = 3.5, cex = 1.5)
   }
   if(ylab){
-    mtext("Probability of True Positive", 2, line = 3.7, cex = 1.5)
+    mtext("Probability of correct conclusion", 2, line = 3.7, cex = 1.5)
   }
   box()
 

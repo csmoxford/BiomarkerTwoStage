@@ -1,6 +1,9 @@
 
 source(paste0(programDir, 'Programs/Enrichment_Design_Zang_Yuan_2016.R'))
+# seq is the command stored in the above file to generate the enrichment design by Zang and Yuan
 source(paste0(programDir, 'Programs/utilFunctions/enrichGetPropertiesTable.R'))
+
+
 
 p0 = 0.1  ## p0: unacceptable response rate
 p1 = 0.3  ## p1: desirable response rate
